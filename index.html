@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Au Bien Être du Massage | Salon de Massage Traditionnel Paris 11</title>
+    <meta name="description" content="Découvrez notre nouveau havre de paix au cœur de Paris 11ème. Massages traditionnels asiatiques : Chinois, Thaïlandais, Indien, Japonais et Royal. Ouvert 7j/7 de 10h30 à 22h00. Réservez en ligne.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS for premium custom map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Ethereal Ripples & Blobs -->
+    <div class="mesh-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Au Bien Être du Massage</span>
+                <span class="logo-subtext">Paris 11ème</span>
+            </a>
+            
+            <nav class="nav">
+                <a href="#concept" class="nav-link">Le Concept</a>
+                <a href="#massages" class="nav-link">Nos Massages</a>
+                <a href="#reservation" class="nav-link">Réserver</a>
+                <a href="#contact" class="nav-link">Contact & Accès</a>
+            </nav>
+
+            <a href="#reservation" class="btn btn-nav">Réserver en ligne</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer">
+        <nav class="mobile-nav">
+            <a href="#concept" class="mobile-link">Le Concept</a>
+            <a href="#massages" class="mobile-link">Nos Massages</a>
+            <a href="#reservation" class="mobile-link">Réserver</a>
+            <a href="#contact" class="mobile-link">Contact & Accès</a>
+            <a href="#reservation" class="btn btn-mobile-booking">Réserver en ligne</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-opening animate-fade-in">
+                        <span class="pulse-dot"></span>
+                        Nouvelle Ouverture
+                    </div>
+                    <h1 class="hero-title animate-slide-up">Votre sanctuaire parisien du bien-être asiatique</h1>
+                    <p class="hero-subtitle animate-slide-up delay-1">Laissez le stress de la capitale derrière vous. Plongez dans une expérience immersive inspirée des traditions ancestrales d'Asie, au cœur du 11ème arrondissement.</p>
+                    
+                    <div class="hero-actions animate-slide-up delay-2">
+                        <a href="#reservation" class="btn btn-primary btn-glowing">Réserver en ligne</a>
+                        <a href="#massages" class="btn btn-secondary">Découvrir le Menu</a>
+                    </div>
+
+                    <div class="hero-badges animate-slide-up delay-3">
+                        <div class="hero-badge-item">
+                            <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Ouvert 7j/7 · 10h30 - 22h00</span>
+                        </div>
+                        <div class="hero-badge-item">
+                            <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>57 rue Sedaine, Paris 11</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image-container animate-fade-in-right">
+                    <div class="image-wrapper">
+                        <img src="zen_massage_hero.png" alt="Soin de massage traditionnel asiatique aux huiles chaudes" class="hero-img">
+                        <div class="image-overlay-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="overlay-text">"Une détente absolue, des masseuses expertes et un accueil d'une douceur rare."</p>
+                            <span class="overlay-author">- Sophie L., cliente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concept Section -->
+        <section id="concept" class="concept section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tagline">L'Esprit du Salon</span>
+                    <h2 class="section-title">L'Art Ancestral de la Relaxation</h2>
+                    <p class="section-description">Chez <strong>Au Bien Être du Massage</strong>, chaque séance est un rituel sur-mesure. Dans un cadre apaisant alliant bois chauds, lumières douces et effluves d'huiles essentielles, nos praticiennes certifiées restaurent l'harmonie de votre corps.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3>Expertise Ancestrale</h3>
+                        <p>Nos techniques sont fidèlement issues des plus grandes traditions de bien-être de Chine, de Thaïlande, d'Inde et du Japon.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Bulles de Sérénité</h3>
+                        <p>Des cabines individuelles ou doubles, insonorisées et pensées pour vous isoler complètement du tumulte parisien.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2c3.86 0 7 3.14 7 7 0 5.25-7 13-7 13S5 14.25 5 9c0-3.86 3.14-7 7-7z"></path>
+                                <circle cx="12" cy="9" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <h3>Huiles Bio Naturelles</h3>
+                        <p>Nous utilisons exclusivement des huiles végétales biologiques et des huiles essentielles pures sélectionnées pour leurs bienfaits.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="massages" class="massages section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tagline">Notre Carte</span>
+                    <h2 class="section-title">Massages Traditionnels d'Asie</h2>
+                    <p class="section-description">Sélectionnez le soin adapté à vos besoins du moment. Tarifs transparents et réservations instantanées.</p>
+                </div>
+
+                <div class="massages-grid">
+                    <!-- Card 1: Massage Chinois -->
+                    <div class="massage-card" data-massage="chinois">
+                        <div class="massage-card-header">
+                            <span class="massage-origin">Chine</span>
+                            <h3 class="massage-name">Massage Chinois (Tui Na)</h3>
+                        </div>
+                        <p class="massage-description">Un massage rythmé et dynamique basé sur la médecine traditionnelle chinoise. Il stimule les méridiens, libère les blocages d'énergie (le Qi) et soulage les tensions musculaires profondes.</p>
+                        <div class="massage-options">
+                            <div class="duration-selector">
+                                <button class="duration-btn active" data-duration="60" data-price="75">60 min</button>
+                                <button class="duration-btn" data-duration="90" data-price="105">90 min</button>
+                            </div>
+                            <div class="massage-price-display">
+                                <span class="price-val">75</span>€
+                            </div>
+                        </div>
+                        <button class="btn btn-massage-book" data-target="chinois">Choisir ce massage</button>
+                    </div>
+
+                    <!-- Card 2: Massage Thaïlandais -->
+                    <div class="massage-card" data-massage="thailandais">
+                        <div class="massage-card-header">
+                            <span class="massage-origin">Thaïlande</span>
+                            <h3 class="massage-name">Massage Thaïlandais</h3>
+                        </div>
+                        <p class="massage-description">Pratiqué sur futon, ce massage combine des étirements inspirés du yoga et des pressions intenses des pouces, coudes et genoux. Parfait pour améliorer la souplesse et dénouer les articulations.</p>
+                        <div class="massage-options">
+                            <div class="duration-selector">
+                                <button class="duration-btn active" data-duration="60" data-price="80">60 min</button>
+                                <button class="duration-btn" data-duration="90" data-price="110">90 min</button>
+                            </div>
+                            <div class="massage-price-display">
+                                <span class="price-val">80</span>€
+                            </div>
+                        </div>
+                        <button class="btn btn-massage-book" data-target="thailandais">Choisir ce massage</button>
+                    </div>
+
+                    <!-- Card 3: Massage Indien -->
+                    <div class="massage-card" data-massage="indien">
+                        <div class="massage-card-header">
+                            <span class="massage-origin">Inde</span>
+                            <h3 class="massage-name">Massage Indien (Ayurvédique)</h3>
+                        </div>
+                        <p class="massage-description">Un rituel enveloppant réalisé à l'huile de sésame chaude. Il harmonise les flux d'énergie corporelle, élimine les toxines physiques et mentales, et nourrit durablement la peau.</p>
+                        <div class="massage-options">
+                            <div class="duration-selector">
+                                <button class="duration-btn active" data-duration="60" data-price="85">60 min</button>
+                                <button class="duration-btn" data-duration="90" data-price="115">90 min</button>
+                            </div>
+                            <div class="massage-price-display">
+                                <span class="price-val">85</span>€
+                            </div>
+                        </div>
+                        <button class="btn btn-massage-book" data-target="indien">Choisir ce massage</button>
+                    </div>
+
+                    <!-- Card 4: Massage Japonais -->
+                    <div class="massage-card" data-massage="japonais">
+                        <div class="massage-card-header">
+                            <span class="massage-origin">Japon</span>
+                            <h3 class="massage-name">Massage Japonais (Shiatsu)</h3>
+                        </div>
+                        <p class="massage-description">Massage relaxant et rééquilibrant effectué par pressions verticales sur des points précis d'acupuncture. Il soulage la fatigue générale, apaise le système nerveux et redynamise le corps.</p>
+                        <div class="massage-options">
+                            <div class="duration-selector">
+                                <button class="duration-btn active" data-duration="60" data-price="75">60 min</button>
+                                <button class="duration-btn" data-duration="90" data-price="105">90 min</button>
+                            </div>
+                            <div class="massage-price-display">
+                                <span class="price-val">75</span>€
+                            </div>
+                        </div>
+                        <button class="btn btn-massage-book" data-target="japonais">Choisir ce massage</button>
+                    </div>
+
+                    <!-- Card 5: Massage Royal -->
+                    <div class="massage-card card-royal" data-massage="royal">
+                        <div class="massage-card-header">
+                            <span class="massage-origin highlight">Signature Royale</span>
+                            <h3 class="massage-name">Massage Royal de l'Asie</h3>
+                        </div>
+                        <p class="massage-description">Notre soin d'excellence. Une fusion harmonieuse des pressions précises du Shiatsu, de la fluidité de l'Ayurvéda et de la chaleur bienfaisante d'huiles rares. Un voyage sensoriel de détente absolue.</p>
+                        <div class="massage-options">
+                            <div class="duration-selector">
+                                <button class="duration-btn active" data-duration="60" data-price="95">60 min</button>
+                                <button class="duration-btn" data-duration="90" data-price="135">90 min</button>
+                            </div>
+                            <div class="massage-price-display">
+                                <span class="price-val">95</span>€
+                            </div>
+                        </div>
+                        <button class="btn btn-massage-book btn-royal" data-target="royal">Choisir ce massage</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking & Availability Section -->
+        <section id="reservation" class="booking-section section-padding">
+            <div class="container">
+                <div class="booking-wrapper">
+                    <!-- Form Side -->
+                    <div class="booking-form-container">
+                        <h2 class="booking-title">Votre Réservation en Ligne</h2>
+                        <p class="booking-subtitle">Simple, immédiat et sans appel téléphonique pendant votre détente.</p>
+
+                        <!-- Step Tracker -->
+                        <div class="booking-steps">
+                            <div class="step active" data-step="1">
+                                <span class="step-num">1</span>
+                                <span class="step-label">Soin</span>
+                            </div>
+                            <div class="step" data-step="2">
+                                <span class="step-num">2</span>
+                                <span class="step-label">Créneau</span>
+                            </div>
+                            <div class="step" data-step="3">
+                                <span class="step-num">3</span>
+                                <span class="step-label">Coordonnées</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 1 Content: Massage & Duration Selection -->
+                        <div class="step-content active" id="step-content-1">
+                            <div class="form-group">
+                                <label class="form-label">Sélectionnez votre massage</label>
+                                <div class="custom-select-grid">
+                                    <div class="select-option-card active" data-value="chinois">
+                                        <span class="select-option-title">Massage Chinois</span>
+                                        <span class="select-option-meta">Tui Na ancestral</span>
+                                    </div>
+                                    <div class="select-option-card" data-value="thailandais">
+                                        <span class="select-option-title">Massage Thaïlandais</span>
+                                        <span class="select-option-meta">Étirements & vitalité</span>
+                                    </div>
+                                    <div class="select-option-card" data-value="indien">
+                                        <span class="select-option-title">Massage Indien</span>
+                                        <span class="select-option-meta">Ayurvédique relaxant</span>
+                                    </div>
+                                    <div class="select-option-card" data-value="japonais">
+                                        <span class="select-option-title">Massage Japonais</span>
+                                        <span class="select-option-meta">Shiatsu harmonisant</span>
+                                    </div>
+                                    <div class="select-option-card royal-option" data-value="royal">
+                                        <span class="select-option-title">Massage Royal (Signature)</span>
+                                        <span class="select-option-meta">Fusion d'excellence</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Sélectionnez la durée</label>
+                                <div class="duration-toggle-group">
+                                    <button type="button" class="duration-toggle-btn active" data-val="60">60 minutes</button>
+                                    <button type="button" class="duration-toggle-btn" data-val="90">90 minutes</button>
+                                </div>
+                            </div>
+
+                            <div class="step-actions">
+                                <div></div>
+                                <button type="button" class="btn btn-primary" id="btn-next-to-2">Continuer</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 Content: Date & Time Selection -->
+                        <div class="step-content" id="step-content-2">
+                            <div class="form-group">
+                                <label class="form-label">Sélectionnez la date</label>
+                                <div class="calendar-days-grid" id="calendar-days">
+                                    <!-- Populated dynamically via JS -->
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Sélectionnez l'heure de votre rendez-vous</label>
+                                <p class="form-sublabel">Disponible 7j/7, de 10h30 à 22h00</p>
+                                <div class="time-slots-grid" id="time-slots">
+                                    <!-- Populated dynamically via JS -->
+                                </div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary" id="btn-back-to-1">Retour</button>
+                                <button type="button" class="btn btn-primary" id="btn-next-to-3">Continuer</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 Content: Contact Details -->
+                        <form class="step-content" id="step-content-3" autocomplete="on">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="client-firstname" class="form-label">Prénom</label>
+                                    <input type="text" id="client-firstname" required class="form-input" placeholder="Ex: Sophie">
+                                </div>
+                                <div class="form-group">
+                                    <label for="client-lastname" class="form-label">Nom</label>
+                                    <input type="text" id="client-lastname" required class="form-input" placeholder="Ex: Lemoine">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="client-phone" class="form-label font-bold">Numéro de téléphone</label>
+                                <input type="tel" id="client-phone" required class="form-input" placeholder="Ex: 06 12 34 56 78" pattern="[0-9\s\-\+\(\)]{10,20}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="client-email" class="form-label">Adresse email</label>
+                                <input type="email" id="client-email" required class="form-input" placeholder="Ex: sophie.lemoine@email.com">
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" required checked>
+                                    <span class="checkmark"></span>
+                                    J'accepte la politique de confidentialité et je confirme ma présence.
+                                </label>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary" id="btn-back-to-2">Retour</button>
+                                <button type="submit" class="btn btn-primary btn-submit-booking">Confirmer mon Rendez-vous</button>
+                            </div>
+                        </form>
+
+                        <!-- Step 4: Success confirmation screen -->
+                        <div class="step-content success-screen" id="step-content-success">
+                            <div class="success-icon-wrapper">
+                                <svg class="success-icon animate-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Votre séance est réservée !</h3>
+                            <p class="success-message">Un SMS et un e-mail de confirmation viennent de vous être envoyés.</p>
+                            
+                            <div class="booking-recap">
+                                <div class="recap-item">
+                                    <span class="recap-label">Soin :</span>
+                                    <span class="recap-value" id="recap-massage">Massage Chinois</span>
+                                </div>
+                                <div class="recap-item">
+                                    <span class="recap-label">Durée :</span>
+                                    <span class="recap-value" id="recap-duration">60 min</span>
+                                </div>
+                                <div class="recap-item">
+                                    <span class="recap-label">Date :</span>
+                                    <span class="recap-value" id="recap-date">Lundi 1 Juin</span>
+                                </div>
+                                <div class="recap-item">
+                                    <span class="recap-label">Heure :</span>
+                                    <span class="recap-value" id="recap-time">14h30</span>
+                                </div>
+                                <div class="recap-item price-item">
+                                    <span class="recap-label">Tarif (à régler sur place) :</span>
+                                    <span class="recap-value" id="recap-price">75€</span>
+                                </div>
+                            </div>
+
+                            <p class="recap-note">Adresse : 57 rue Sedaine, Paris 11ème. En cas de retard ou d'annulation, merci de nous prévenir au minimum 12 heures à l'avance.</p>
+
+                            <button type="button" class="btn btn-primary btn-rebook" id="btn-restart-booking">Nouvelle réservation</button>
+                        </div>
+                    </div>
+
+                    <!-- Info Side -->
+                    <div class="booking-info-panel">
+                        <div class="info-bubble">
+                            <h3 class="info-bubble-title">Pourquoi réserver en ligne ?</h3>
+                            <ul class="info-list">
+                                <li>
+                                    <svg class="info-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span><strong>Zéro attente :</strong> Pas de répondeur, votre créneau est bloqué instantanément.</span>
+                                </li>
+                                <li>
+                                    <svg class="info-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span><strong>Flexibilité :</strong> Modifiez ou annulez en ligne jusqu'à 12h avant le rendez-vous.</span>
+                                </li>
+                                <li>
+                                    <svg class="info-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span><strong>Respect de la détente :</strong> Évite que les praticiennes ne soient dérangées en plein soin.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="availability-card">
+                            <h4 class="availability-title font-bold text-lg">Nos Horaires de Soin</h4>
+                            <div class="availability-hours">
+                                <span class="hours-tag">Lundi au Dimanche (7j/7)</span>
+                                <span class="hours-val">10:30 – 22:00</span>
+                            </div>
+                            <p class="availability-subtext">Dernière séance disponible à 21h00 pour les massages d'une heure.</p>
+                        </div>
+
+                        <div class="phone-callout">
+                            <p class="phone-callout-text">Vous préférez réserver de vive voix ?</p>
+                            <a href="tel:0143578910" class="phone-number">01 43 57 89 10</a>
+                            <p class="phone-callout-sub">Si nous sommes en massage, laissez un message et nous vous rappellerons.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container contact-container">
+                <div class="contact-details">
+                    <span class="section-tagline">Nous trouver</span>
+                    <h2 class="section-title">Accès & Informations Pratiques</h2>
+                    <p class="contact-description">Le salon est idéalement situé dans le dynamique 11ème arrondissement de Paris, proche des commerces et facilement accessible en transports.</p>
+                    
+                    <div class="contact-info-list">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Notre Adresse</h4>
+                                <p>57 rue Sedaine, 75011 Paris</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Transports en Commun</h4>
+                                <p><strong>Métro 9 :</strong> Station Voltaire (4 min à pied)</p>
+                                <p><strong>Métro 1, 5, 8 :</strong> Station Bastille (8 min à pied)</p>
+                                <p><strong>Bus 56, 61, 69, 76 :</strong> Arrêt Ledru-Rollin / Voltaire</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Téléphone & Contact</h4>
+                                <p><a href="tel:0143578910" class="hover-link">01 43 57 89 10</a></p>
+                                <p><a href="mailto:contact@aubienetredumassage.fr" class="hover-link">contact@aubienetredumassage.fr</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container-wrapper">
+                    <!-- The Leaflet map element -->
+                    <div id="map" class="styled-map"></div>
+                    <div class="map-glass-badge">
+                        <span class="badge-title">Au Bien Être du Massage</span>
+                        <span class="badge-addr">57 rue Sedaine, 75011 Paris</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">Au Bien Être du Massage</span>
+                <p class="footer-desc">Nouvel écrin parisien dédié aux massages asiatiques traditionnels de prestige. Énergie, harmonie et relaxation absolue.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Plan du Site</h4>
+                <a href="#concept">Le Concept</a>
+                <a href="#massages">Nos Massages</a>
+                <a href="#reservation">Réserver en ligne</a>
+                <a href="#contact">Contact & Accès</a>
+            </div>
+
+            <div class="footer-legal">
+                <h4>Informations</h4>
+                <p>Ouvert 7j/7 : 10h30 – 22h00</p>
+                <p>N° Siret : 987 654 321 00010</p>
+                <p>&copy; 2026 Au Bien Être du Massage. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS for custom maps -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Main JS File -->
+    <script src="app.js"></script>
+</body>
+</html>
